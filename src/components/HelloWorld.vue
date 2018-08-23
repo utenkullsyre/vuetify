@@ -27,16 +27,23 @@
     <v-container>
       <v-layout row wrap>
         <v-flex xs12 sm12 md6>
-          <v-container grid-list-lg>
+          <v-container grid-list-md>
             <v-layout column>
-              <v-card v-for="(link,index) in links" block :key="index">
-                <v-card-title primary-title>
-                  {{ link }}
-                  <v-card-actions>
-                    <v-icon medium @click="">close</v-icon>
-                  </v-card-actions>
-                </v-card-title>
-              </v-card>
+              <v-flex v-for="(link,index) in links">
+                <v-card  block :key="index" color="deep-purple lighten-5" hover>
+                      <v-card-title primary-title>
+                        <v-container>
+                          <v-layout row wrap justify-space-between align-center>
+                        {{ link }}
+                        <v-card-actions>
+                          <v-icon medium @click="">close</v-icon>
+                        </v-card-actions>
+                      </v-layout>
+                    </v-container>
+                      </v-card-title>
+
+                </v-card>
+              </v-flex>
             </v-layout>
 
           </v-container>

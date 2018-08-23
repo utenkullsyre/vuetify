@@ -2,8 +2,10 @@
   <div class="">
     <v-navigation-drawer
           v-model="drawer"
-          absolute
+          fixed
           temporary
+          height="100vh"
+          hide-overlay
         >
         <h2>heiheii</h2>
     </v-navigation-drawer>
